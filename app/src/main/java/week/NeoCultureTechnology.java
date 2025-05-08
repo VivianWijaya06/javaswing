@@ -227,15 +227,32 @@ public class NeoCultureTechnology {
         sidebar.setPreferredSize(SIDEBAR_SIZE);
         sidebar.setLayout(new BoxLayout(sidebar, BoxLayout.Y_AXIS));
         sidebar.setBorder(BorderFactory.createEmptyBorder(20, 10, 20, 10));
-
-        String[] menuItems = {"Home", "Member", "Song List", "Biodata", 
-                             "Light Stick", "NCT 127", "NCT Dream", "WayV"};
+    
+        // Menambahkan setiap menu item secara manual
+        sidebar.add(createMenuButton("Home"));
+        sidebar.add(Box.createRigidArea(new Dimension(0, 10)));
         
-        for (String item : menuItems) {
-            sidebar.add(createMenuButton(item));
-            sidebar.add(Box.createRigidArea(new Dimension(0, 10)));
-        }
-
+        sidebar.add(createMenuButton("Member"));
+        sidebar.add(Box.createRigidArea(new Dimension(0, 10)));
+        
+        sidebar.add(createMenuButton("Song List"));
+        sidebar.add(Box.createRigidArea(new Dimension(0, 10)));
+        
+        sidebar.add(createMenuButton("Biodata"));
+        sidebar.add(Box.createRigidArea(new Dimension(0, 10)));
+        
+        sidebar.add(createMenuButton("Light Stick"));
+        sidebar.add(Box.createRigidArea(new Dimension(0, 10)));
+        
+        sidebar.add(createMenuButton("NCT 127"));
+        sidebar.add(Box.createRigidArea(new Dimension(0, 10)));
+        
+        sidebar.add(createMenuButton("NCT Dream"));
+        sidebar.add(Box.createRigidArea(new Dimension(0, 10)));
+        
+        sidebar.add(createMenuButton("WayV"));
+        sidebar.add(Box.createRigidArea(new Dimension(0, 10)));
+    
         return sidebar;
     }
 
